@@ -20,14 +20,19 @@
   // createGif(150, 0)
   // createGif(200, 0)
   
-  const gifWidth = 40
-  const gifHeight = 15
+  const gifWidth = 50
+  const gifHeight = 40
   const gifOffsetX = 50
-  const num = window.innerWidth / gifWidth
+  const gifOffsetY = 50
+  const numColumns = window.innerWidth / gifWidth
+  const numRows = window.innerHeight / gifHeight
   
-  for (let i = 0; i < 100; i++) {
-    const x = i * gifWidth - gifOffsetX
-    createGif(x, 0)
+  for (let r = 0; r < numRows; r++) {
+    for (let c = 0; c <numColumns; c++) {
+      const x = c * gifWidth - gifOffsetX
+      const y = r * gifHeight - gifOffsetY
+      createGif(x, y)
+    }
   }
   
   document.body.style.backgroundColor = "pink"
