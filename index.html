@@ -1,3 +1,18 @@
+
+
+<!-- <img src="waves.gif" alt="description of image" style="position: absolute; left: 300px; top: 200px"> -->
+
+<body></body>
 <script>
+  for (let i = 0; i < 100; i++) {
+    const gif = document.createElement("img")
+    gif.src = "waves.gif"
+    gif.style.position = "absolute"
+    gif.style.top = Math.random() + window.innerHeight + "px"
+    gif.style.left = Math.random() + window.innerWidth + "px"
+    document.body.appendChild(gif)
+  }
+  
+  document.body.style.backgroundColor = "pink"
   
 </script>
