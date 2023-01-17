@@ -1,13 +1,14 @@
 <body></body>
-<script> 
-  const gifWidth = 50
-  const gifHeight = 40
+<script>
+  
+  const gifWidth = 100
+  const gifHeight = 60
   const gifOffsetX = 50
   const gifOffsetY = 50
   const numColumns = window.innerWidth / gifWidth
   const numRows = window.innerHeight / gifHeight
   const gifURL = "waves.gif"
-  
+
   function createGif(x, y) {
     const gif = document.createElement("img")
     gif.src = gifURL
@@ -16,15 +17,20 @@
     gif.style.left = x + "px"
     document.body.appendChild(gif)
   }
-  
-  for (let r = 0; r < numRows; r++) {
-    for (let c = 0; c <numColumns; c++) {
-      const x = c * gifWidth - gifOffsetX
-      const y = r * gifHeight - gifOffsetY
-      createGif(x, y)
+
+  function setup() {
+    for (let r = 0; r < numRows; r++) {
+      for (let c = 0; c < numColumns; c++) {
+        const x = c * gifWidth - gifOffsetX
+        const y = r * gifHeight - gifOffsetY
+        createGif(x, y)
+      }
     }
+
+    document.body.style.backgroundColor = "pink"
+    document.body.style.overflow = "hidden"
   }
+
+  window.addEventListener("load", setup)
   
-  document.body.style.backgroundColor = "pink"
-  document.body.style.overflow = "hidden"
 </script>
