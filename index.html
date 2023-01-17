@@ -4,13 +4,25 @@
 
 <body></body>
 <script>
-  for (let i = 0; i < 100; i++) {
+  
+  function createGif(x, y) {
     const gif = document.createElement("img")
     gif.src = "waves.gif"
     gif.style.position = "absolute"
-    gif.style.top = Math.random() + window.innerHeight + "px"
-    gif.style.left = Math.random() + window.innerWidth + "px"
+    gif.style.top = y + "px"
+    gif.style.left = x + "px"
     document.body.appendChild(gif)
+  }
+  
+  // createGif(0,0)
+  // createGif(50, 0)
+  // createGif(100, 0)
+  // createGif(150, 0)
+  // createGif(200, 0)
+  
+  for (let i = 0; i < 100; i++) {
+    const x = i * 150
+    createGif(x, 100)
   }
   
   document.body.style.backgroundColor = "pink"
