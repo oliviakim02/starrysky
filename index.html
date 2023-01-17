@@ -1,31 +1,21 @@
-
-
-<!-- <img src="waves.gif" alt="description of image" style="position: absolute; left: 300px; top: 200px"> -->
-
 <body></body>
-<script>
-  
-  function createGif(x, y) {
-    const gif = document.createElement("img")
-    gif.src = "waves.gif"
-    gif.style.position = "absolute"
-    gif.style.top = y + "px"
-    gif.style.left = x + "px"
-    document.body.appendChild(gif)
-  }
-  
-  // createGif(0,0)
-  // createGif(50, 0)
-  // createGif(100, 0)
-  // createGif(150, 0)
-  // createGif(200, 0)
-  
+<script> 
   const gifWidth = 50
   const gifHeight = 40
   const gifOffsetX = 50
   const gifOffsetY = 50
   const numColumns = window.innerWidth / gifWidth
   const numRows = window.innerHeight / gifHeight
+  const gifURL = "waves.gif"
+  
+  function createGif(x, y) {
+    const gif = document.createElement("img")
+    gif.src = gifURL
+    gif.style.position = "absolute"
+    gif.style.top = y + "px"
+    gif.style.left = x + "px"
+    document.body.appendChild(gif)
+  }
   
   for (let r = 0; r < numRows; r++) {
     for (let c = 0; c <numColumns; c++) {
@@ -37,5 +27,4 @@
   
   document.body.style.backgroundColor = "pink"
   document.body.style.overflow = "hidden"
-  
 </script>
