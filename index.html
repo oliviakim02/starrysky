@@ -20,11 +20,17 @@
   // createGif(150, 0)
   // createGif(200, 0)
   
+  const gifWidth = 40
+  const gifHeight = 15
+  const gifOffsetX = 50
+  const num = window.innerWidth / gifWidth
+  
   for (let i = 0; i < 100; i++) {
-    const x = i * 150
-    createGif(x, 100)
+    const x = i * gifWidth - gifOffsetX
+    createGif(x, 0)
   }
   
   document.body.style.backgroundColor = "pink"
+  document.body.style.overflow = "hidden"
   
 </script>
