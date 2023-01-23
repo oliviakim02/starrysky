@@ -4,44 +4,40 @@
 
 <style>
   .center {
-  display: block;
-  margin: auto;
-  position: relative;
-  top: 20%;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 20%;
   }
 </style>
 
 <script>
-  
   const gifWidth = 300
   const gifHeight = 220
   const gifOffsetX = 50
   const gifOffsetY = 50
   const numColumns = window.innerWidth / gifWidth
   const numRows = window.innerHeight / gifHeight
-  const gifURL2 = "sky.gif"
-  function createGif() {
-  }
-  
-  function createGif2(x, y) {
-    const gif2 = document.createElement("img")
-    gif2.src = gifURL2
-    gif2.style.position = "absolute"
-  	  gif2.style.top = y + "px"
-    gif2.style.left = x + "px"
-    document.body.appendChild(gif2)
+  const gifURL = "sky.gif"
+
+  function createGif() {}
+
+  function createGif(x, y) {
+    const gif = document.createElement("img")
+    gif.src = gifURL
+    gif.style.position = "absolute"
+    gif.style.top = y + "px"
+    gif.style.left = x + "px"
+    document.body.appendChild(gif)
   }
 
   function setup() {
-    
-    
     for (let r = 0; r < numRows; r++) {
       for (let c = 0; c < numColumns; c++) {
         const x = c * gifWidth - gifOffsetX
         const y = r * gifHeight - gifOffsetY
-        createGif2(x, y)
+        createGif(x, y)
       }
-    createGif	()
     }
 
     document.body.style.backgroundColor = "black"
@@ -49,7 +45,4 @@
   }
 
   window.addEventListener("load", setup)
-  
-  
-  
 </script>
