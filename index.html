@@ -10,16 +10,12 @@
   const numColumns = window.innerWidth / gifWidth
   const numRows = window.innerHeight / gifHeight
   const gifURL = "saturn.gif"
-  const gifURL2 = "stars.gif"
+  const gifURL2 = "sky.gif"
 
   function createGif() {
-    //centered = document.createElement("center")
-    
     const gif = document.createElement("img")
     gif.src = gifURL
     gif.style.position = "absolute"
-    gif.style.margin = "0 auto"
-    // document.createElement(center)
     document.body.appendChild(gif)
   }
   
