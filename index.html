@@ -1,21 +1,26 @@
 <body>
-
+  <img src="saturn.gif" alt="saturn animation" class="center">
 </body>
+
+<style>
+  .center {
+  display: block;
+  margin: auto;
+  position: relative;
+  top: 20%;
+  }
+</style>
+
 <script>
   
-  const gifWidth = 200
-  const gifHeight = 120
+  const gifWidth = 300
+  const gifHeight = 220
   const gifOffsetX = 50
   const gifOffsetY = 50
   const numColumns = window.innerWidth / gifWidth
   const numRows = window.innerHeight / gifHeight
-  const gifURL = "saturn.gif"
   const gifURL2 = "sky.gif"
   function createGif() {
-  const gif = document.createElement("img")
-  gif.src = gifURL
-  gif.style.position = "absolute"
-  document.body.appendChild(gif)
   }
   
   function createGif2(x, y) {
