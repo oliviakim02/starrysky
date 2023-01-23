@@ -1,21 +1,29 @@
 <body></body>
 <script>
   
-  const gifWidth = 100
-  const gifHeight = 60
+  const gifWidth = 200
+  const gifHeight = 120
   const gifOffsetX = 50
   const gifOffsetY = 50
   const numColumns = window.innerWidth / gifWidth
   const numRows = window.innerHeight / gifHeight
-  const gifURL = "waves.gif"
+  const gifURL = "saturn.gif"
+  const gifURL2 = "stars.gif"
 
   function createGif(x, y) {
     const gif = document.createElement("img")
     gif.src = gifURL
-    gif.style.position = "absolute"
-    gif.style.top = y + "px"
-    gif.style.left = x + "px"
+    document.createElement("center")
     document.body.appendChild(gif)
+  }
+  
+  function createGif2(x, y) {
+    const gif2 = document.createElement("img")
+    gif2.src = gifURL2
+    gif2.style.position = "absolute"
+  	  gif2.style.top = y + "px"
+    gif2.style.left = x + "px"
+    document.body.appendChild(gif2)
   }
 
   function setup() {
@@ -23,14 +31,16 @@
       for (let c = 0; c < numColumns; c++) {
         const x = c * gifWidth - gifOffsetX
         const y = r * gifHeight - gifOffsetY
-        createGif(x, y)
+        createGif2(x, y)
       }
     }
 
-    document.body.style.backgroundColor = "pink"
+    document.body.style.backgroundColor = "fff0f5"
     document.body.style.overflow = "hidden"
   }
 
   window.addEventListener("load", setup)
+  
+  
   
 </script>
